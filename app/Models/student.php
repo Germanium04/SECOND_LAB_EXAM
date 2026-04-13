@@ -12,6 +12,6 @@ class Student extends Model
         'name',
         'email',
         'grade',
-        'gender'
+        'gender',
     ];
 }

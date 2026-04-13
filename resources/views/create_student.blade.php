@@ -45,7 +45,7 @@
             margin-bottom: 5px;
         }
 
-        input {
+        input, select {
             width: 100%;
             padding: 9px 12px;
             border: 1px solid #b8d8b8;
@@ -54,13 +54,16 @@
             color: #1a3d1a;
             background: #f7fbf7;
             outline: none;
+            appearance: none;
             transition: border-color 0.2s, background 0.2s;
         }
 
-        input:focus {
+        input:focus, select:focus {
             border-color: #2e7d2e;
             background: #fff;
         }
+
+        select { cursor: pointer; }
 
         .btn {
             width: 100%;
@@ -103,7 +106,11 @@
 
             <div class="field">
                 <label>Gender</label>
-                <input type="text" name="gender" placeholder="e.g. Male / Female">
+                <select name="gender">
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
             </div>
 
             <button type="submit" class="btn">Save Student</button>

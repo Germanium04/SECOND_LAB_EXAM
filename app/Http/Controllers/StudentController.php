@@ -20,8 +20,12 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
-        Student::create($request->all());
-
+        Student::create([
+            'name'   => $request->name,
+            'email'  => $request->email,
+            'grade'  => $request->grade,
+            'gender' => $request->gender,
+        ]);
         return redirect()->route('student.index');
     }
 
